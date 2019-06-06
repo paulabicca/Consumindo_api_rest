@@ -1,14 +1,20 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
+      List Users
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-label text-wrap>
+        <h2>{{user.name}}</h2>
+      </ion-label>
+      <ion-label text-wrap>
+        <p>{{user.username}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
